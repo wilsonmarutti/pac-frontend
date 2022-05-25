@@ -1,0 +1,17 @@
+.cadastro {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.cadastro div {
+  display: inline-block;
+  text-align: center;
+  vertical-align: center;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+}
+
+.cadastro div button {
+
+}
