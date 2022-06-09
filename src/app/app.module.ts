@@ -8,6 +8,7 @@ import {ButtonModule} from "primeng/button";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ApiService } from './api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ApiService } from './api.service';
         BrowserModule,
         ButtonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ],
   providers: [ApiService],
   bootstrap: [AppComponent]
