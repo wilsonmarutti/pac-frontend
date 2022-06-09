@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validator, Validators} from "@angular/forms";
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +12,8 @@ export class CadastroComponent implements OnInit {
   public formGroup: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private apiSerivce: ApiService,
   ) { }
 
   ngOnInit(): void {
@@ -31,7 +33,9 @@ export class CadastroComponent implements OnInit {
   }
 
   public onSave() {
-    console.log(this.formGroup.getRawValue())
+    console.log(this.formGroup.getRawValue());
+    const value = this.formGroup.getRawValue();
+    this.apiSerivce.cadastroPaciente(value)
   }
 
 
