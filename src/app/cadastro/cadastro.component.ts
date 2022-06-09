@@ -22,12 +22,11 @@ export class CadastroComponent implements OnInit {
 
   private getFormGroup() {
     const formGroup = this.formBuilder.group({
-      email: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-      nome: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-      cpf: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-      dataNascimento: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-      senha: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-      confirmaSenha: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
+      edtCadUserEmail: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
+      edtCadUserName: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
+      edtCadUserCPF: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
+      edtCadUserBirth: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
+      edtCadUserPassword: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
     })
     return formGroup;
   }
