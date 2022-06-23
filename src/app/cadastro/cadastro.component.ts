@@ -27,10 +27,6 @@ export class CadastroComponent implements OnInit {
       edtCadUserCPF: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
       edtCadUserBirth: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
       edtCadUserPassword: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-<<<<<<< HEAD
-      confirmaSenha: [{value: undefined, disabled: false}, Validators.compose([Validators.required])],
-=======
->>>>>>> 580a351a818fb601f8c96a088caa6af5c256eb11
     })
     return formGroup;
   }
@@ -38,7 +34,7 @@ export class CadastroComponent implements OnInit {
   public onSave() {
     console.log(this.formGroup.getRawValue());
     const value = this.formGroup.getRawValue();
-    this.apiSerivce.cadastroPaciente(value)
+    this.apiSerivce.cadastroPaciente(value).pipe().subscribe()
   }
 
 
