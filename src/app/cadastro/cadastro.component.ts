@@ -32,9 +32,12 @@ export class CadastroComponent implements OnInit {
   }
 
   public onSave() {
-    console.log(this.formGroup.getRawValue());
     const value = this.formGroup.getRawValue();
-    this.apiSerivce.cadastroPaciente(value).pipe().subscribe()
+    console.log(value)
+    this.apiSerivce.cadastroPaciente(value)
+        .subscribe((val: any) => {
+          console.log(val)
+        });
   }
 
 
